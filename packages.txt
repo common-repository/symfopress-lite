@@ -1,0 +1,3 @@
+sudo apt-get install php5-dev php-pear
+sudo apt-get install libicu-dev
+sudo pecl install intl

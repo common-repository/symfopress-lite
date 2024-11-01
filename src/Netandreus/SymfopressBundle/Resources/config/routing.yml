@@ -1,0 +1,4 @@
+_demo:
+    resource: "@NetandreusSymfopressBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /symfopress-demo

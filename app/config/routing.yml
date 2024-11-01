@@ -1,0 +1,3 @@
+# NetandreusSymfopress
+_symfopress_demo:
+    resource: "@NetandreusSymfopressBundle/Resources/config/routing.yml"

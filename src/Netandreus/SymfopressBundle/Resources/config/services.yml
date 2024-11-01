@@ -1,0 +1,17 @@
+services:
+    twig.extension.acme.demo:
+        class: Netandreus\SymfopressBundle\Twig\Extension\DemoExtension
+        arguments: [@twig.loader]
+        tags:
+            - { name: twig.extension }
+    #kernel.listener.your_listener_name:
+    #    class: Netandreus\SymfopressBundle\EventListener\ControllerListener
+    #    arguments: [@twig.extension.acme.demo]
+    #    tags:
+    #        - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+    kernel.listener.your_listener_name:
+        class: Netandreus\SymfopressBundle\EventListener\ControllerListener
+        arguments: [@twig.extension.acme.demo]
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }

@@ -1,0 +1,17 @@
+{% extends "NetandreusSymfopressBundle::layout.html.twig" %}
+
+{% block title "Symfony - Demos" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">Symfopress info</h1>
+    <ul id="demo-list">
+        <li>Installation dir: {{ path }}</li>
+        <li> <a href="{{ settingsPath }}">View Settings</a></li>
+    </ul>
+    <h1 class="title">Available demos</h1>
+    <ul id="demo-list">
+        <li><a href="{{ path('_demo_hello', {'name': 'World'}) }}">Hello World</a></li>
+    </ul>
+{% endblock %}
